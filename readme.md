@@ -1,7 +1,8 @@
 # Ruby
 
-Ruby is a private moderation bot used in the [KeyCats](https://github.com/KeyCats) discord server. This repo includes, the discord bot: Moderation, server stats, welcome & leave, dropdown roles, auto responders, auto moderation, anti alts, suggestions, logging, utils
+Ruby is a private moderation bot used. This repo includes, the discord bot: Moderation, server stats, welcome & leave, reaction roles, auto responders, auto moderation, anti alts, suggestions, logging, utils! Everything is manageable via a simple and easy to use dashboard ( COMING SOON )!
 
+Ruby's base files were used for the [KeyCats Bot](https://github.com/KeyCats/KeyCats) too!
 
 
 # Progression ⏰
@@ -9,11 +10,13 @@ Ruby is a private moderation bot used in the [KeyCats](https://github.com/KeyCat
 - [-] Moderation
 - [-] Server Stats
 - [-] Welcome & Leave
-- [-] Dropdown roles
+- [-] Reaction Roles
 - [-] Auto Responders
 - [-] Auto Moderation
 - [-] Anti Alts / Join Gates
 - [-] Suggestions
 - [-] Logging
 - [-] Utls
+- [-] Tags / Custom Commands
+- [-] Starboards
 

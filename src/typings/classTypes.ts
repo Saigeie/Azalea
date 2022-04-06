@@ -1,29 +1,24 @@
 /**
- * Developers - KeyCats ( JNSP, Saige, Kanna )
- * Repo: https://github.com/KeyCats/Ruby
- * Github: https://github.com/KeyCats/Ruby
- * 2022
- */
+* Developer - Saige
+* Repo: https://github.com/Saigeie/Ruby
+* Github: https://github.com/Saigeie/
+* 2022
+*/
 
 import {
-  ChatInputApplicationCommandData,
-  CommandInteraction,
-  CommandInteractionOptionResolver,
-  GuildMember,
+  Message,
   PermissionResolvable,
 } from "discord.js";
+
 import Ruby from "../structures/Client";
 
 //? Commands
 
-export interface Extendedinteraction extends CommandInteraction {
-  member: GuildMember;
-}
 
 export interface CommandRunInterface {
   client: Ruby;
-  ctx: Extendedinteraction;
-  args: CommandInteractionOptionResolver;
+  ctx: Message;
+  args: String[];
 }
 
 export type CommandRun = (options: CommandRunInterface) => any;
@@ -38,4 +33,4 @@ export type CommandTypes = {
   developer?: boolean;
   permissions?: PermissionResolvable[];
   execute: CommandRun;
-} & ChatInputApplicationCommandData;
+};
