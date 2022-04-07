@@ -5,9 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "ts-node-dev --rs --cls src/index.ts",
-    "build": "tsc --project tsconfig.json",
-    "prod:linux": "chmod 777 src/scripts/start.sh && chmod 777 node_modules/.bin/ts-node-dev && pm2 start src/scripts/start.sh --name=Helper",
-    "build:prod": "npm run build && npm run prod"
+    "start": "chmod 777 ./start.sh"
   },
   "keywords": [
     "discord bot",
