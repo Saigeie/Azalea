@@ -1,9 +1,9 @@
 /**
-* Developer - Saige
-* Repo: https://github.com/Saigeie/Ruby
-* Github: https://github.com/Saigeie/
-* 2022
-*/
+ * Developer - Saige
+ * Repo: https://github.com/Saigeie/Azalea
+ * Github: https://github.com/Saigeie/
+ * 2022
+ */
 
 import { ClientEvents } from "discord.js";
 

@@ -1,11 +1,11 @@
 /**
  * Developer - Saige
- * Repo: https://github.com/Saigeie/Ruby
+ * Repo: https://github.com/Saigeie/Azalea
  * Github: https://github.com/Saigeie/
  * 2022
  */
 
-import { CommandTypes } from "../typings/classTypes";
+import { CommandTypes } from "../../typings/classTypes";
 
 export class Command {
   constructor(options: CommandTypes) {

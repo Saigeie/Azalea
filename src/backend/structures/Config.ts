@@ -1,6 +1,6 @@
 /**
  * Developer - Saige
- * Repo: https://github.com/Saigeie/Ruby
+ * Repo: https://github.com/Saigeie/Azalea
  * Github: https://github.com/Saigeie/
  * 2022
  */
@@ -12,6 +12,7 @@ export interface Links {
 }
 
 export interface Config {
+  prefix?: string
   developers?: string[];
   testServers?: string[];
   links?: Links;

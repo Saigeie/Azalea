@@ -3,11 +3,11 @@ import { connect } from "mongoose";
 import { client } from "..";
 
 /**
-* Developers - KeyCats ( JNSP, Saige, Kanna )
-* Repo: https://github.com/KeyCats/Ruby
-* Github: https://github.com/KeyCats/Ruby
-* 2022
-*/
+ * Developers - KeyCats ( JNSP, Saige, Kanna )
+ * Repo: https://github.com/KeyCats/Azalea
+ * Github: https://github.com/KeyCats/Azalea
+ * 2022
+ */
 
 export default function () {
   connect(`${process.env.MONGO_DB}`)

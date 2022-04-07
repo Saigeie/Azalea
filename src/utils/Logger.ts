@@ -1,9 +1,9 @@
 /**
-* Developer - Saige
-* Repo: https://github.com/Saigeie/Ruby
-* Github: https://github.com/Saigeie/
-* 2022
-*/
+ * Developer - Saige
+ * Repo: https://github.com/Saigeie/Azalea
+ * Github: https://github.com/Saigeie/
+ * 2022
+ */
 
 import { config } from "dotenv";
 config();
@@ -46,7 +46,7 @@ const Logger = createLogger({
   ),
   transports: [
     new transports.Console(),
-    new transports.File({ filename: "./src/assets/logs/Helper.log" }),
+    new transports.File({ filename: "./src/assets/logs/Azalea.log" }),
   ],
 });
 

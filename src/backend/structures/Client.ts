@@ -1,6 +1,6 @@
 /**
  * Developer - Saige
- * Repo: https://github.com/Saigeie/Ruby
+ * Repo: https://github.com/Saigeie/Azalea
  * Github: https://github.com/Saigeie/
  * 2022
  */
@@ -11,20 +11,18 @@ import {
   ClientEvents,
   Collection,
 } from "discord.js";
-import { CommandTypes } from "../typings/classTypes";
+import { CommandTypes } from "../../typings/classTypes";
 import { Config } from "./Config";
-import Logger from "../utils/Logger";
+import Logger from "../../utils/Logger";
 import glob from "glob";
 import { promisify } from "util";
-import chalk from "chalk";
-import { RegisterCommandsOptions } from "../typings/clientTypes";
-import connect from "../data/connect";
+import connect from "../../Schemas/connect";
 import { Event } from "./Event";
 const globPromise = promisify(glob);
 
-export default class Ruby extends Client {
+export default class Azalea extends Client {
   commands: Collection<string, CommandTypes> = new Collection();
-  config: Config = {};
+  config: Config = { prefix: "!" };
   logger = Logger;
   constructor() {
     super({ intents: 32767 });
@@ -37,37 +35,19 @@ export default class Ruby extends Client {
     return (await import(filePath))?.default;
   }
 
-  async registerCommands({ commands, guildId }: RegisterCommandsOptions) {
-    if (guildId) {
-      this.guilds.cache.get(guildId)?.commands.set(commands);
-      this.logger.info(`${chalk.redBright(`Commands Registered:`)} ${guildId}`);
-    } else {
-      this.application?.commands.set(commands);
-      this.logger.info(`${chalk.redBright(`Registering global commands`)}`);
-    }
-  }
-
   async registerModules() {
     connect();
-    const slashCommands: ApplicationCommandDataResolvable[] = [];
     const commandFiles = await globPromise(
-      `${__dirname}/../commands/**/*{.ts,.js}`
+      `${__dirname}/../plugins/**/commands/*{.ts,.js}`
     );
     commandFiles.forEach(async (filePath) => {
       const command: CommandTypes = await this.importFile(filePath);
       if (!command.name) return;
       this.commands.set(command.name, command);
-      slashCommands.push(command);
     });
-    this.on("ready", () => {
-      this.registerCommands({
-        //guildId: `${process.env.GUILD_ID}`,
-        commands: slashCommands,
-      });
-    });
-    const eventFiles = await globPromise(
-      `${__dirname}/../events/**/*{.ts,.js}`
-    );
+    const eventFiles: string[] = []
+    await (await globPromise(`${__dirname}/../events/**/*{.ts,.js}`)).forEach((file) => { eventFiles.push(file) })
+    await (await globPromise(`${__dirname}/../plugins/**/events/*{.ts,.js}`)).forEach((file) => { eventFiles.push(file) })
     eventFiles.forEach(async (filePath) => {
       const event: Event<keyof ClientEvents> = await this.importFile(filePath);
       this.on(event.event, event.run);
