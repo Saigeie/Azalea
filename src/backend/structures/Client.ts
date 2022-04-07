@@ -16,7 +16,7 @@ import { Config } from "./Config";
 import Logger from "../../utils/Logger";
 import glob from "glob";
 import { promisify } from "util";
-import connect from "../../Schemas/connect";
+import connect from "../../schemas/connect";
 import { Event } from "./Event";
 const globPromise = promisify(glob);
 

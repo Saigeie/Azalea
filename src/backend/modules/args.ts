@@ -1,3 +1,10 @@
+/**
+ * Developer - Saige
+ * Repo: https://github.com/Saigeie/Ruby
+ * Github: https://github.com/Saigeie/
+ * 2022
+ */
+
 const formatArgs = async (str: string) => {
   let obj: Object = {};
   str.split("-").forEach((value) => {

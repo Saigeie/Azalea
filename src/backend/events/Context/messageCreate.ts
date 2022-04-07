@@ -1,3 +1,10 @@
+/**
+* Developer - Saige
+* Repo: https://github.com/Saigeie/Ruby
+* Github: https://github.com/Saigeie/
+* 2022
+*/
+
 import { client } from "../../..";
 import formatArgs from "../../modules/args";
 import { Event } from "../../structures/Event";

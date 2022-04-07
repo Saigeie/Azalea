@@ -5,6 +5,10 @@
  * 2022
  */
 
+import { config } from "dotenv";
 import Azalea from "./backend/structures/Client";
+import dash from "./frontend/server"
 export const client = new Azalea();
+config();
 client.start();
+dash()
