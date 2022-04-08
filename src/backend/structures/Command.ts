@@ -5,8 +5,9 @@
  * 2022
  */
 
-import { CommandTypes } from "../../typings/classTypes";
-
+import { CommandRun, CommandTypes } from "../../typings/classTypes";
+import Azalea from "./Client";
+import { Message } from "discord.js";
 export class Command {
   constructor(options: CommandTypes) {
     Object.assign(this, options);
