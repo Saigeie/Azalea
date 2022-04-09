@@ -49,7 +49,7 @@ export const TestWarns = async (userId: string, guild: Guild) => {
     const cases = await Cases.findOne({ guildId: guild.id, userId })
     const caseSettings = await CaseSettings.findOne({guildId: guild.id})
     if (!cases || !caseSettings) return;
-    if (!(cases.cases.length >= caseSettings.max_case_amount)) return;
+    if (!(cases.cases.filter(f => f.type === "warn").length >= caseSettings.max_case_amount)) return;
     const member = guild.members.cache.find(m => m.id === userId);
     if (!member) return;
     switch (caseSettings.max_case_action) {
