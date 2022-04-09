@@ -5,6 +5,8 @@
  * 2022
  */
 
+import { ColorResolvable } from "discord.js";
+
 
 export interface Emojis {
   reply: string;
@@ -12,6 +14,7 @@ export interface Emojis {
   left_skip: string;
   right_arrow: string;
   left_arrow: string;
+  coin: string;
 }
 export interface Links {
   github: string;
@@ -20,6 +23,7 @@ export interface Links {
 }
 
 export interface Config {
+  color?: ColorResolvable;
   prefix?: string
   developers?: string[];
   testServers?: string[];

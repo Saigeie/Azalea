@@ -26,18 +26,20 @@ export const importFile = async (filePath: string) => {
 export default class Azalea extends Client {
   commands: Collection<string, CommandTypes> = new Collection();
   config: Config = {
+    color: "#54348f",
     emojis: {
       reply: "<:reply:959830863661649951>",
       right_skip: "<:right_skip:959833675569168424>",
       left_skip: " <:left_skip:959833675560808498>",
       right_arrow: "<:right_arrow:959833675523063870>",
       left_arrow: "<:left_arrow:959833675296555029>",
+      coin: "₿",
     },
   };
-  APIKey: string = "";
+  APIKey: string = "filler";
   logger = Logger;
   constructor() {
-    super({ intents: 32767 });
+    super({ intents: 32767, allowedMentions: { repliedUser: false } });
   }
   start() {
     this.registerModules();
@@ -58,6 +60,7 @@ export default class Azalea extends Client {
     await (
       await globPromise(`${__dirname}/../events/**/*{.ts,.js}`)
     ).forEach((file) => {
+      if (file.toLowerCase().includes("process")) return;
       eventFiles.push(file);
     });
     await (

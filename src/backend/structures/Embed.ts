@@ -10,7 +10,7 @@ export class Embed {
     data?: MessageEmbedOptions,
   ) {
     return new MessageEmbed({
-      color: "NOT_QUITE_BLACK",
+      color: client.config.color,
       ...data,
     });
   }

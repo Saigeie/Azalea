@@ -23,5 +23,4 @@ export const APIRouteHandler = async (app) => {
     });
   });
   app.get("/api", (req, res) => res.send({ msg: `Azalea API`, status: `Soon! / Private`, code: 200}))
-  app.get("/api/*", (req, res) => res.send({ error: "Not Found" }));
 };

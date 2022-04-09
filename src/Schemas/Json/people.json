@@ -1,0 +1,303 @@
+[
+    {
+        "name": "grandma",
+        "rarity": "common"
+    },
+    {
+        "name": "grandpa",
+        "rarity": "common"
+    },
+    {
+      "name": "couple",
+      "rarity": "common"
+    },
+    {
+      "name": "child",
+      "rarity": "common"
+    },
+
+    {
+      "name": "Jeff Bezos",
+      "rarity": "rare"
+    },
+    {
+      "name": "Bill Gates",
+      "rarity": "rare"
+    },{
+      "name": "Saige",
+      "rarity": "lengendary"
+    },
+    {
+      "name": "Olivia",
+      "rarity": "common"
+    },
+    {
+      "name": "Austin",
+      "rarity": "common"
+    },
+    {
+      "name": "Kenzi",
+      "rarity": "common"
+    },
+    {
+      "name": "Eli",
+      "rarity": "common"
+    },
+
+    {
+      "name": "Francis",
+      "rarity": "common"
+    },
+    {
+      "name": "Sophie",
+      "rarity": "common"
+    },
+    {
+      "name": "Leta",
+      "rarity": "common"
+    },
+    {
+      "name": "Jack",
+      "rarity": "common"
+    },
+
+    {
+      "name": "Milo",
+      "rarity": "common"
+    },
+    {
+      "name": "Justin",
+      "rarity": "common"
+    },
+    {
+      "name": "Hannah",
+      "rarity": "common"
+    },
+    {
+      "name": "Harry",
+      "rarity": "common"
+    },
+
+    {
+      "name": "Anita",
+      "rarity": "common"
+    },
+    {
+      "name": "Megan",
+      "rarity": "common"
+    },
+
+    {
+      "name": "Layla",
+      "rarity": "common"
+    },
+    {
+      "name": "Lily",
+      "rarity": "common"
+    },
+    {
+      "name": "Holly",
+      "rarity": "common"
+    },
+    {
+      "name": "Lisa",
+      "rarity": "common"
+    },
+    {
+      "name": "Liam",
+      "rarity": "common"
+    },
+
+    {
+      "name": "Liane",
+      "rarity": "common"
+    },
+    {
+      "name": "Milly",
+      "rarity": "common"
+    },
+    {
+      "name": "Adam",
+      "rarity": "common"
+    },
+
+    {
+      "name": "Issac",
+      "rarity": "common"
+    },
+    {
+      "name": "Thomas",
+      "rarity": "common"
+    },
+    {
+      "name": "Marco",
+      "rarity": "common"
+    },
+    {
+      "name": "Calum",
+      "rarity": "common"
+    },
+
+    {
+      "name": "Tommy",
+      "rarity": "common"
+    },
+    {
+      "name": "Fin",
+      "rarity": "common"
+    },
+    {
+      "name": "Finn",
+      "rarity": "common"
+    },
+    {
+      "name": "Finley",
+      "rarity": "common"
+    },
+    {
+      "name": "Max",
+      "rarity": "common"
+    },
+    {
+      "name": "Pearl",
+      "rarity": "common"
+    },
+    {
+      "name": "Dean",
+      "rarity": "common"
+    },
+    {
+      "name": "Jane",
+      "rarity": "common"
+    },
+    {
+      "name": "Lance",
+      "rarity": "common"
+    },
+    {
+      "name": "Evan",
+      "rarity": "common"
+    },
+    {
+      "name": "Euan",
+      "rarity": "common"
+    },
+    {
+      "name": "Elle",
+      "rarity": "common"
+    },
+
+    {
+      "name": "Ellie",
+      "rarity": "common"
+    },
+    {
+      "name": "Maddie",
+      "rarity": "common"
+    },
+    {
+      "name": "Harold",
+      "rarity": "common"
+    },
+    {
+      "name": "Tyrone",
+      "rarity": "common"
+    },
+    {
+      "name": "Tyler",
+      "rarity": "common"
+    },
+    {
+      "name": "Zula",
+      "rarity": "common"
+    },
+    {
+      "name": "Daniel",
+      "rarity": "common"
+    },
+    {
+      "name": "Elliot",
+      "rarity": "common"
+    },
+    {
+      "name": "Ethol",
+      "rarity": "common"
+    },
+    {
+      "name": "Paris",
+      "rarity": "common"
+    },
+    {
+      "name": "Mike",
+      "rarity": "common"
+    },
+    {
+      "name": "Ian",
+      "rarity": "common"
+    },
+    {
+      "name": "Alivin",
+      "rarity": "common"
+    },
+    {
+      "name": "Louise",
+      "rarity": "common"
+    },
+    {
+      "name": "Bob",
+      "rarity": "common"
+    },
+    {
+      "name": "Mary",
+      "rarity": "common"
+    },
+    {
+      "name": "Eddie",
+      "rarity": "common"
+    },
+    {
+      "name": "Edward",
+      "rarity": "common"
+    },
+    {
+      "name": "Carl",
+      "rarity": "common"
+    },
+
+    {
+      "name": "Joe",
+      "rarity": "common"
+    },
+    {
+      "name": "Joseph",
+      "rarity": "common"
+    },
+    {
+      "name": "Kristie",
+      "rarity": "common"
+    },
+    {
+      "name": "Noah",
+      "rarity": "common"
+    },
+    {
+      "name": "Bruce",
+      "rarity": "common"
+    },
+    {
+      "name": "Phill",
+      "rarity": "common"
+    },
+    {
+      "name": "Steve",
+      "rarity": "common"
+    },
+    {
+      "name": "Steven",
+      "rarity": "common"
+    },
+    {
+      "name": "eve",
+      "rarity": "common"
+    }
+]
