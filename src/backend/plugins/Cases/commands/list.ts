@@ -9,7 +9,7 @@ export default new Command({
     name: `cases`,
     category: "Cases",
     description: `See a members cases`,
-    expectedArgs: [`!cases --member=<member>`],
+    expectedArgs: [`!cases <member>`],
     errorMessages: [`Please supply a valid member.`, `**<<member>>** has no cases.`],
     execute: async ({ ctx, formattedArgs, command, config }) => {
         const { member, id } = formattedArgs as { member: string; id: string; }

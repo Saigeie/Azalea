@@ -13,13 +13,11 @@ import { Event } from "../../structures/Event";
 
 export default new Event(`messageCreate`, async (message) => {
   if (message.author.bot || !message.guild) return;
-  let guildData = await GuildMain.findOne({ guildId: message.guild.id });
-  if (!guildData) await GuildMain.create({ guildId: message.guild.id });
+  let guildData = await GuildMain.findOne({ guildId: message.guild.id }) || { guildId: message.guild.id, prefix: "!", blacklistedUsers: [] }
   let caseSettings = await CaseSettings.findOne({
     guildId: message.guild.id,
   });
   if (!caseSettings) await CaseSettings.create({ guildId: message.guild.id });
-  guildData = await GuildMain.findOne({ guildId: message.guild.id });
   if (!message.content.startsWith(guildData.prefix)) return;
   const [cmd, ...args]: string[] = message.content
     .slice(guildData.prefix.length)
@@ -29,7 +27,9 @@ export default new Event(`messageCreate`, async (message) => {
     client.commands.find((c) => c.name === cmd.toLowerCase()) ||
     client.commands.find((c) => c.aliases?.includes(cmd.toLowerCase()));
   if (command) {
-    const formattedArgs = await formatArgs(args.join(" "));
+    const formattedArgs = await formatArgs(
+      message.content.slice(guildData.prefix.length).trim()
+    );
     const newErrorMessages: string[] = [];
     const newExpectedArgs: string[] = [];
     if (command.errorMessages) {
@@ -47,11 +47,13 @@ export default new Event(`messageCreate`, async (message) => {
     await command.execute({
       client: client,
       ctx: message,
-      args: args,
+      args: args as string[],
       formattedArgs: formattedArgs,
       command: command,
       config: guildData,
     });
+
+    if (!guildData) await GuildMain.create({ guildId: message.guild.id });
   } else {
     // Custom Commands
   }

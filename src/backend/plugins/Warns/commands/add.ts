@@ -3,10 +3,10 @@ import { IndividualCase } from "../../../../schemas/Collections/Users/Cases";
 import { makeId } from "../../../modules/caseIds";
 import getMember from "../../../modules/getMember";
 import { Command } from "../../../structures/Command";
-import { AddWarn, Response } from "../../../modules/Addons/Warns"
+import { AddWarn, Response, TestWarns } from "../Functions"
 import messageDelete from "../../../modules/messageDelete";
 export default new Command({
-  name: `warn`,
+  name: `warn_add`,
     description: `Add a warn to a user.`,
     expectedArgs: [`!warn <member> [--reason=<string>] [--mod | -m] [--invis | -i]`],
     category: `warns`,
@@ -25,11 +25,12 @@ export default new Command({
           date: Date.now(),
           id: `${await makeId(mentionedMember.id, ctx.guild.id)}`,
         };
-        if (mod || m) { obj["moderatorId"] = ctx.member.id };
+        if (mod || m) { obj["moderatorId"] = ctx.author.id };
         const warning = await AddWarn(obj, mentionedMember.id, ctx.guild.id) as Response
         if (invis || i) { return; }
         const msg = await ctx.channel.send({ content: `${warning.msg}` })
         messageDelete(msg, 5000)
+        TestWarns(mentionedMember.user.id, ctx.guild as Guild)
         return;
     }
 })

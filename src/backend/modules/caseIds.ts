@@ -1,13 +1,9 @@
 import Cases from "../../schemas/Collections/Users/Cases"
 
 export const makeId = async (userId: string, guildId: string): Promise<number> => {
-    let length: number;
-    const data = await Cases.findOne({ userId: userId, guildId: guildId })
+    let length: number = 0;
+    const data = await Cases.find({ guildId: guildId })
     if (!data) { length = 1; return length };
-    length = data.cases.length + 1;
+    data.forEach((x) => { length = length + x.cases.length })
     return length;
-}
-
-export const getId = async () => {
-
 }
